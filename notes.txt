@@ -1,0 +1,15 @@
+- Segmentation fault: Arises when a programmer tries to access some memory that is not available to its process
+- Rust is:
+  - Statically typed: every type must be known at compile time
+  - Strongly typed: The type system prevents the programmer from some kinds of errors, e.g. using the wrong type for a function parameter
+  - Prevents data races
+- Rust also prevents data races: concurrent access to a variable where one is a write
+- Rust doesnt have:
+  - Null pointers
+  - Data races
+  - Use after free
+  - Use before initialization
+  - Goto
+  - Automatic coercion of Boolean, numbers and enumerations
+
+
