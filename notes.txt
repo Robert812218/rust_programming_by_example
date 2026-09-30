@@ -12,4 +12,29 @@
   - Goto
   - Automatic coercion of Boolean, numbers and enumerations
 
+- struct: A type containing data
+- enum: A type with different possible variants
+- trait: A description of behavior 
+- impl: Adding behavior to a type/implementing a trait
 
+- An associated function belongs to the type itself. It does not take self.
+/// 
+impl Point {
+  // Associated function
+  fn new(x: i32, y: i32) -> Self {
+    Self { x, y }
+  }
+
+  // Method
+  fn print(&self) {
+    println!("({}, {})", self.x, self.y);
+  }
+
+  // Easiest rule to remember:
+  Point::something -> associated function
+  p.something() --> method
+
+  // And usually:
+  // associated function -> Does NOT have self
+  // method -> HAS self, &self, or &mut self
+}
