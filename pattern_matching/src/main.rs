@@ -10,4 +10,28 @@ fn main() {
             Expr::Val(x) => println!("{}", x),
         }
     }
+
+    fn uppercase(c: u8) -> u8 {
+        match c {
+            b'a'...b'z' => c - 32,
+            _ => c,
+        }
+    }
+
+    println!("{}", uppercase(b'a') as char;
+
+    fn is_alphanumeric(c: char) -> bool {
+        match c {
+            'a' ... 'z' | 'A' ... 'Z' | '0' ... '9' => true,
+            _ => false,
+        }
+    }
+
+    fn uppercase(c: u8) -> u8 {
+        if let b'a' ... b'z' = c {
+            c - 32
+        } else {
+            c 
+        }
+    }
 }
