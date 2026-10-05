@@ -1,0 +1,6 @@
+[package]
+name = "playing_with_images"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
