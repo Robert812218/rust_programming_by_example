@@ -83,7 +83,23 @@ impl TetriminoGenerator for TetriminoL {
 	}
 }
 
-struct TetriminoO;
+struct TetriminoZ;
+
+impl TetriminoGenerator for TetriminoZ {
+	fn new() -> Tetrimino {
+		states: vec![vec![vec![6, 6, 0, 0],
+                              vec![0, 6, 6, 0],
+                              vec![0, 0, 0, 0],
+                              vec![0, 0, 0, 0]],
+                         vec![vec![0, 0, 6, 0],
+                              vec![0, 6, 6, 0],
+                              vec![0, 6, 0, 0],
+                              vec![0, 0, 0, 0]]],
+            x: 4,
+            y: 0,
+            current_state: 0,
+	}
+}
 
 impl TetriminoGenerator for TetriminoO {
 	fn new() -> Tetrimino {
@@ -118,6 +134,35 @@ impl TetriminoGenerator for TetriminoS {
 		}
 	}
 }
+
+struct TetriminoT;
+
+impl TetriminoGenerator for TetriminoT {
+    fn new() -> Tetrimino {
+        Tetrimino {
+            states: vec![vec![vec![7, 7, 7, 0],
+                              vec![0, 7, 0, 0],
+                              vec![0, 0, 0, 0],
+                              vec![0, 0, 0, 0]],
+                         vec![vec![0, 7, 0, 0],
+                              vec![7, 7, 0, 0],
+                              vec![0, 7, 0, 0],
+                              vec![0, 0, 0, 0]],
+                         vec![vec![0, 7, 0, 0],
+                              vec![7, 7, 7, 0],
+                              vec![0, 0, 0, 0],
+                              vec![0, 0, 0, 0]],
+                         vec![vec![0, 7, 0, 0],
+                              vec![0, 7, 7, 0],
+                              vec![0, 7, 0, 0],
+                              vec![0, 0, 0, 0]]],
+            x: 4,
+            y: 0,
+            current_state: 0,
+        }
+    }
+}
+
 
 fn main() {
     println!("Hello, world!");
