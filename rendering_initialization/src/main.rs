@@ -61,4 +61,24 @@ fn main() {
 			.expect("Couldn't get window's canvas");
 
 	let texture_creator = TextureCreator<_> = canvas.texture_creator();
+
+	let let grid = create_texture_rect(&mut canvas, &texture_creator,
+								0, 0, 0,
+								TETRIS_HEIGHT as u32 * 10,
+								TETRIS_HEIGHT as u32 * 16).expect("Failed to create a texture");
+
+	let border = create_texture_rect(&mut canvas, 
+								texture_creator,
+								255, 255, 255,
+								TETRIS_HEIGHT as u32 * 10 + 20,
+								TETRIS_HEIGHT as u32 * 16 + 20).expect("Failed to create a texture");
+	macro_rules! texture {
+		($r:expr, $g:expr, $b:expr) => (
+			create_texture_rect(&mut canvas,
+					&texture_creator,
+					$r, $g, $b,
+					TETRIS_HEIGHT as u32,
+					TETRIS_HEIGHT as u32).unwrap()
+		)
+	}
 }
